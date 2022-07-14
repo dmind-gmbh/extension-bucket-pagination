@@ -1,0 +1,26 @@
+{
+  "name": "dmind/bucket-pagination",
+  "description": "Bucket Pagination for TYPO3",
+  "license": "GPL-2.0-or-later",
+  "type": "typo3-cms-extension",
+  "version": "1.0.0",
+  "authors": [
+    {
+      "name": "Steffen Keuper",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "typo3/cms-core": ">=10.4.26"
+  },
+  "autoload": {
+    "psr-4": {
+      "Dmind\\BucketPagination\\": "Classes"
+    }
+  },
+  "extra": {
+    "typo3/cms": {
+      "extension-key": "bucket_pagination"
+    }
+  }
+}
