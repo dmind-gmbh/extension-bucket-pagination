@@ -9,6 +9,9 @@ It is recommended to install the extension using composer with `composer require
 ## Recommended
 The [NumberedPaginator](https://github.com/georgringer/numbered_pagination) is recommended for easier pagination over the bucket paginator.
 
+## Usage
+Below are 2 example usages of each paginator in combination with the NumberedPaginator.
+
 ### BucketPaginator
 You can pass items to save into a bucket, which can be retrieved again with the generated bucket ID.
 It is also possible to update the items in the bucket, so you can either don't pass items if a bucket is passed to the request or pass items if there is a need to update the bucket (if f.e. changes happened to the results).  
