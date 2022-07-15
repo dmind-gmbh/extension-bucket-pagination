@@ -46,6 +46,22 @@ $paginator = new BucketPaginator(
 $pagination = new NumberedPagination($paginator, $maximumLinks);
 ```
 
+You can retrieve the bucket contents and additional items freely during the template as well:
+```html
+<f:if condition="{pagination.paginator.additionalContent.filter}">
+    You filtered for {pagination.paginator.additionalContent.filter.title}
+    <br/>
+    (Bucket ID: {pagination.paginator.bucketId})
+    <br/>
+</f:if>
+<hr/>
+
+<f:for each="{pagination.paginator.paginatedItems}" as="item">
+    {item.title}
+    <br/>
+</f:for>
+```
+
 ### FromDataSourcePaginator
 Another option (f.e. due to storage reasons or to refresh results) would be to use the `FromDataSourcePaginator`
 to generate the items we are paginating over from the bucket contents.
@@ -78,6 +94,22 @@ $paginator = new FromDataSourcePaginator(
 );
 
 $pagination = new NumberedPagination($paginator, $maximumLinks);
+```
+
+Here you can also retrieve the bucket content as well:
+```html
+<f:if condition="{pagination.paginator.bucketContent.filter}">
+    You filtered for {pagination.paginator.bucketContent.filter.title}
+    <br/>
+    (Bucket ID: {pagination.paginator.bucketId})
+    <br/>
+</f:if>
+<hr/>
+
+<f:for each="{pagination.paginator.paginatedItems}" as="item">
+    {item.title}
+    <br/>
+</f:for>
 ```
 
 ## License
