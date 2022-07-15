@@ -1,5 +1,5 @@
 # Bucket Paginator
-![GitHub](https://img.shields.io/github/license/git@github.com:dmind-gmbh/extension-bucket-pagination)
+![GitHub](https://img.shields.io/github/license/dmind-gmbh/extension-bucket-pagination)
 
 Paginator using the Bucket Pattern to allow paginating over POST form results
 
