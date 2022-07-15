@@ -62,7 +62,9 @@ $paginator = new FromDataSourcePaginator(
     // to retrieve the items from based on the bucket contents
     $productRepository,
     // bucket content which will be passed to the DataSource
-    ['filter' => $filter],
+    // if you pass new/changed arguments while also passing a bucket ID
+    // it'll update the items in the bucket
+    $currentBucketId ? []: ['filter' => $filter],
     // either the current bucket ID or an empty string
     // it'll generate its own bucket ID if not set based on the items and optional elements
     $currentBucketId,
