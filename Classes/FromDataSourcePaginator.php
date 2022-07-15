@@ -29,6 +29,11 @@ final class FromDataSourcePaginator extends AbstractPaginator
     /**
      * @var array
      */
+    private array $bucketContent;
+
+    /**
+     * @var array
+     */
     private array $items;
 
     /**
@@ -85,6 +90,7 @@ final class FromDataSourcePaginator extends AbstractPaginator
         $items = $dataSource->getItemsFromDataSource($bucketContent);
 
         $this->bucketId = $bucketId;
+        $this->bucketContent = $bucketContent;
         $this->items = $items;
         $this->setCurrentPageNumber($currentPageNumber);
         $this->setItemsPerPage($itemsPerPage);
@@ -132,11 +138,23 @@ final class FromDataSourcePaginator extends AbstractPaginator
     }
 
     /**
+     * returns the bucket ID
+     *
      * @return string
      */
     public function getBucketId(): string
     {
         return $this->bucketId;
+    }
+
+    /**
+     * returns the bucket content
+     *
+     * @return array
+     */
+    public function getBucketContent(): array
+    {
+        return $this->bucketContent;
     }
 
     /**
