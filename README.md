@@ -62,8 +62,8 @@ You can retrieve the bucket contents and additional items freely during the temp
 </f:for>
 ```
 
-### FromDataSourcePaginator
-Another option (f.e. due to storage reasons or to refresh results) would be to use the `FromDataSourcePaginator`
+### DataSourcePaginator
+Another option (f.e. due to storage reasons or to refresh results) would be to use the `DataSourcePaginator`
 to generate the items we are paginating over from the bucket contents.
 The advantages are smaller bucket sizes and automatically current results.
 
@@ -76,7 +76,7 @@ $maximumLinks = 15;
 $currentPage = $this->request->hasArgument('currentPage') ? (int)$this->request->getArgument('currentPage') : 1;
 $currentBucketId = $this->request->hasArgument('bucketId') ? $this->request->getArgument('bucketId') : '';
 
-$paginator = new FromDataSourcePaginator(
+$paginator = new DataSourcePaginator(
     // the data source which implements the \Dmind\BucketPagination\DataSourceInterface
     // to retrieve the items from based on the bucket contents
     $productRepository,

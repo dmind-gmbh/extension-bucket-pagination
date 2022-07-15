@@ -12,7 +12,7 @@ call_user_func(
             ]
         ];
 
-        $GLOBALS['TYPO3_CONF_VARS']['SYS']['caching']['cacheConfigurations'][\Dmind\BucketPagination\FromDataSourcePaginator::CACHE_IDENTIFIER] = [
+        $GLOBALS['TYPO3_CONF_VARS']['SYS']['caching']['cacheConfigurations'][\Dmind\BucketPagination\DataSourcePaginator::CACHE_IDENTIFIER] = [
             'frontend' => \TYPO3\CMS\Core\Cache\Frontend\VariableFrontend::class,
             'backend' => \TYPO3\CMS\Core\Cache\Backend\Typo3DatabaseBackend::class,
             'options' => [

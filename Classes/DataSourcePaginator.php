@@ -17,7 +17,7 @@ use TYPO3\CMS\Extbase\Security\Exception\InvalidArgumentForHashGenerationExcepti
  * This helps trim down the used storage if a bucket is taking huge amounts of storage or large amounts of items are involved.
  * Another advantage is, that we always have current data since the result items are not cached, only the filter
  */
-final class FromDataSourcePaginator extends AbstractPaginator
+final class DataSourcePaginator extends AbstractPaginator
 {
     const CACHE_IDENTIFIER = 'bucket_data_source_pagination';
 
