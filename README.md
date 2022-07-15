@@ -19,7 +19,7 @@ It is also possible to update the items in the bucket, so you can either don't p
 An example usage:
 ```php
 $itemsToBePaginated = ['apple', 'banana', 'strawberry', 'raspberry', 'pineapple'];
-$filter = (new Filter)->setTitle('apple');
+$filter = (new Filter())->setTitle('apple');
 $itemsPerPage = 10;
 $maximumLinks = 15;
 
@@ -69,7 +69,7 @@ The advantages are smaller bucket sizes and automatically current results.
 
 ```php
 $productRepository = GeneralUtility::makeInstance(ProductRepository::class);
-$filter = (new Filter)->setTitle('apple');
+$filter = (new Filter())->setTitle('apple');
 $itemsPerPage = 10;
 $maximumLinks = 15;
 
